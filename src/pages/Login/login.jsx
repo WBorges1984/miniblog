@@ -42,7 +42,7 @@ const Login = () => {
                     />
                 </label>
                 <label>
-                    <span>Confirmação de senha:</span>
+                    <span>Password:</span>
                     <input
                         type="password"
                         name="password"
