@@ -52,10 +52,10 @@ function App() {
                                 }
                             />
                             <Route
-                                path="/post/create"
+                                path="/posts/create"
                                 element={
                                     user ? (
-                                        <CreatePost />
+                                        <CreatePost user={user} />
                                     ) : (
                                         <Navigate to={"/login"} />
                                     )

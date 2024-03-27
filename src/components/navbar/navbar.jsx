@@ -21,7 +21,6 @@ const Navbar = (props) => {
                         Home
                     </NavLink>
                 </li>
-                {console.log("TEste de auth", user)}
                 {user && (
                     <>
                         <li>
