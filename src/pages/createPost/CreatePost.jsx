@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useInsertDocuments } from "../../hooks/useinsertDocuments";
 import styles from "./createPost.module.css";
@@ -15,6 +15,10 @@ const CreatePost = (props) => {
     const { insertDocument, response } = useInsertDocuments("posts");
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        console.log(formError);
+    }, [formError]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -107,7 +111,12 @@ const CreatePost = (props) => {
                     </button>
                 )}
                 {response.error && <p className="error">{response.error}</p>}
-                {formError && <p className="error">{formError}</p>}
+                {formError.length > 0 ? (
+                    <p className="error">{formError}</p>
+                ) : (
+                    ""
+                )}
+                {console.log("teste", formError)}
             </form>
         </div>
     );

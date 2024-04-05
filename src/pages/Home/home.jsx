@@ -15,7 +15,7 @@ const Home = () => {
             <form action={handleSubmit} className={styles.search_form}>
                 <input
                     type="text"
-                    placeholder="OU busque por Tags..."
+                    placeholder="Ou busque por Tags..."
                     onChange={(e) => setQuery(e.target.value)}
                     value={query}
                 />
